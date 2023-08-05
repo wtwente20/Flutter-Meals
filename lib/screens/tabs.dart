@@ -26,13 +26,13 @@ class _TabsScreenState extends State<TabsScreen> {
     var activePageTitle = 'Categories';
 
     if(_selectedPageIndex == 1) {
-      activePage = MealsScreen(title: 'Favorites', meals: []);
+      activePage = const MealsScreen(meals: []);
       activePageTitle ='Your Favorites';
     }
     
     return Scaffold(
       appBar: AppBar(
-        title: Text('dynamic.....'),
+        title: Text(activePageTitle),
       ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
